@@ -10,10 +10,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <kotlin.version>1.6.0</kotlin.version>
-        <junit.jupiter.version>5.6.2</junit.jupiter.version>
-        <junit.vintage.version>5.6.2</junit.vintage.version>
+        <kotlin.version>1.9.10</kotlin.version>
+        <junit.jupiter.version>5.10.0</junit.jupiter.version>
         <main.class>solver.MainKt</main.class>
+        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+        <exec-maven-plugin.version>3.1.0</exec-maven-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -69,7 +70,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
+                <version>${maven-jar-plugin.version}</version>
                 <configuration>
                     <archive>
                         <manifest>
@@ -82,7 +83,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
-                <version>1.2.1</version>
+                <version>${exec-maven-plugin.version}</version>
                 <configuration>
                     <mainClass>${main.class}</mainClass>
                 </configuration>
